@@ -9,8 +9,7 @@ df['datetime'] = pd.to_datetime(df['datetime'], format='%d/%m/%Y %H:%M:%S')
 # Set 'datetime' column as the index
 df.set_index('datetime', inplace=True)
 
-# TO:DO Resample data into daily intervals and calculate the average meter reading for each day
-# HINT : Look at Pandas dataframe.resample() method
+# Resample data into daily intervals and calculate the average meter reading for each day
 
 df_aggregated = df.resample('D').mean()
 
